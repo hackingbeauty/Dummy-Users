@@ -12,9 +12,8 @@ namespace :import do
       end
       fields = [:first_name,:last_name,:email]
       User.import fields, names, :validate => false 
-     # p User.all
-#    rescue StandardError => e
- #     puts "oops, you have an error: #{e.message}"
+    rescue StandardError => e
+      puts "oops, you have an error: #{e.message}"
     end
   end
 end
