@@ -3,7 +3,7 @@ require 'ar-extensions'
 require 'faker'
 
 namespace :import do
-  desc "import 5 million dummy users"
+  desc "import 10,000 dummy users"
   task :users => :environment do
     begin_time = Time.now
     begin
@@ -14,7 +14,6 @@ namespace :import do
       end
       fields = [:first_name,:last_name,:email]
       User.import fields, names, :validate => false 
-     # p User.all
     rescue StandardError => e
       puts "oops, you have an error: #{e.message}"
     end
