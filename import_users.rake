@@ -8,7 +8,7 @@ namespace :import do
     begin_time = Time.now
     begin
       names = []
-      10000.times do |x|
+      9999.times do |x|
         names.push ["test-#{x}-first-name","test-#{x}-last-name", "test-#{x}-email@email.com"]
         names.push 
       end
